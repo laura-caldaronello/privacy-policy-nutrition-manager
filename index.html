@@ -1,61 +1,194 @@
-📄 Privacy Policy — Shopping List
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — Nutrition Manager</title>
+    <style>
+        body { font-family: sans-serif; max-width: 800px; margin: 0 auto; padding: 24px 16px; color: #1F2A27; background: #F6F7F5; line-height: 1.6;
+        }
+        h1 { font-size: 22px; margin-bottom: 4px; }
+        h2 { font-size: 17px; margin-top: 28px; margin-bottom: 6px; color: #2E5D4B; }
+        p, li { font-size: 14px; }
+        ul { padding-left: 20px; }
+        .last-updated { font-size: 12px; color: #666; margin-bottom: 24px; }
+        hr { border: none; border-top: 1px solid #ddd; margin: 36px 0; }
+        .lang-label { display: inline-block; background: #2E5D4B; color: #fff; font-size: 11px; padding: 2px 8px; border-radius: 4px; margin-bottom:
+                12px; }
+    </style>
+</head>
+<body>
 
-Ultimo aggiornamento: 25/11/2025
+<span class="lang-label">ENGLISH</span>
+<h1>Privacy Policy — Nutrition Manager</h1>
+<p class="last-updated">Last updated: April 7, 2026</p>
 
-La presente Informativa sulla Privacy descrive come l’app Shopping List gestisce i tuoi dati quando utilizzi le sue funzionalità.
+<h2>1. About this app</h2>
+<p>
+    Nutrition Manager is a personal nutrition tracking application that helps you manage your fridge contents,
+    shopping lists, and meal logs. The app is developed and maintained by danabnormal and is not affiliated
+    with any company.
+</p>
 
-L’app è sviluppata da caldaronello.dev@gmail.com
-.
+<h2>2. Data collection</h2>
+<p>
+    Nutrition Manager does <strong>not</strong> collect, store, or transmit any personal data.
+    Specifically:
+</p>
+<ul>
+    <li>No account or registration is required.</li>
+    <li>No names, email addresses, or identifiers of any kind are collected.</li>
+    <li>No health or biometric data leaves your device.</li>
+    <li>No analytics, crash reporting, or advertising SDKs are included in the app.</li>
+    <li>No tracking or profiling of any kind takes place.</li>
+</ul>
 
-📌 1. Raccolta dei dati
+<h2>3. Local data storage</h2>
+<p>
+    All data you enter (fridge items, shopping lists, meals, nutritional values) is stored exclusively
+    on your device using Android's SharedPreferences mechanism. This data is private to the app and
+    is never uploaded to any server or cloud service. If you uninstall the app, all locally stored
+    data is deleted by the operating system.
+</p>
 
-Shopping List non raccoglie alcun dato personale identificabile.
+<h2>4. Camera usage</h2>
+<p>
+    The app requests access to your device camera solely to scan product barcodes. No photos or
+    video are captured, recorded, or stored. Camera frames are processed on-device in real time
+    and immediately discarded after barcode detection.
+</p>
 
-L’unico accesso a funzionalità del dispositivo riguarda:
+<h2>5. Network requests</h2>
+<p>
+    The app makes network requests exclusively to the
+    <a href="https://world.openfoodfacts.org" target="_blank">Open Food Facts</a> public API
+    (<code>openfoodfacts.org</code>) in order to retrieve nutritional information for food products
+    by name or barcode. These requests contain only the search term or barcode you entered — no
+    personal information is transmitted. Open Food Facts is an independent non-profit project;
+    its own privacy policy applies to those requests.
+</p>
+<p>
+    No other external services, servers, or third-party APIs are contacted by this app.
+</p>
 
-📷 Fotocamera
+<h2>6. Third-party libraries</h2>
+<p>
+    The app uses the following open-source Flutter/Dart packages, none of which collect user data:
+</p>
+<ul>
+    <li><strong>mobile_scanner</strong> — on-device barcode scanning</li>
+    <li><strong>http</strong> — HTTP requests to Open Food Facts</li>
+    <li><strong>shared_preferences</strong> — local key-value storage</li>
+    <li><strong>fl_chart</strong> — nutritional charts rendered locally</li>
+    <li><strong>flutter_speed_dial</strong> — UI component</li>
+    <li><strong>flutter_localizations / intl</strong> — localization (IT/EN)</li>
+</ul>
 
-Usata esclusivamente per scansionare codici a barre tramite il plugin mobile_scanner.
-Le immagini acquisite dalla fotocamera:
+<h2>7. Children's privacy</h2>
+<p>
+    This app does not knowingly collect any information from anyone, including children under 13.
+    Since no data is collected at all, there is no special handling required for children's data.
+</p>
 
-non vengono memorizzate
+<h2>8. Changes to this policy</h2>
+<p>
+    If this privacy policy is updated, the new version will be published at this URL and bundled
+    with the next app release.
+</p>
 
-non vengono inviate online
+<h2>9. Contact</h2>
+<p>
+    For questions about this privacy policy, contact the developer at:
+    <a href="mailto:caldaronello.dev@gmail.com">caldaronello.dev@gmail.com</a>
+</p>
 
-non vengono condivise con terze parti
+<hr>
 
-La scansione avviene interamente sul dispositivo.
+<span class="lang-label">ITALIANO</span>
+<h1>Informativa sulla Privacy — Nutrition Manager</h1>
+<p class="last-updated">Ultimo aggiornamento: 7 aprile 2026</p>
 
-📌 2. Nessun dato inviato ai server
+<h2>1. Informazioni sull'app</h2>
+<p>
+    Nutrition Manager è un'applicazione personale per il monitoraggio nutrizionale che consente di
+    gestire il contenuto del frigorifero, le liste della spesa e i pasti. L'app è sviluppata e
+    mantenuta da danabnormal e non è affiliata ad alcuna società.
+</p>
 
-Shopping List non invia alcun dato a server esterni o a servizi di terze parti.
+<h2>2. Raccolta dei dati</h2>
+<p>
+    Nutrition Manager <strong>non</strong> raccoglie, archivia né trasmette dati personali.
+    In particolare:
+</p>
+<ul>
+    <li>Non è richiesta alcuna registrazione o account.</li>
+    <li>Non vengono raccolti nomi, indirizzi e-mail o identificatori di alcun tipo.</li>
+    <li>Nessun dato sanitario o biometrico lascia il tuo dispositivo.</li>
+    <li>L'app non include SDK di analytics, crash reporting o pubblicità.</li>
+    <li>Non viene effettuato alcun tracking o profilazione.</li>
+</ul>
 
-L'app non contiene analytics, non utilizza database remoti e non raccoglie log personali.
+<h2>3. Archiviazione locale dei dati</h2>
+<p>
+    Tutti i dati inseriti (alimenti nel frigo, liste della spesa, pasti, valori nutrizionali) vengono
+    archiviati esclusivamente sul tuo dispositivo tramite il meccanismo SharedPreferences di Android.
+    Questi dati sono privati all'app e non vengono mai caricati su alcun server o servizio cloud.
+    Disinstallando l'app, tutti i dati locali vengono eliminati dal sistema operativo.
+</p>
 
-📌 3. Permessi richiesti
-● android.permission.CAMERA
+<h2>4. Utilizzo della fotocamera</h2>
+<p>
+    L'app richiede l'accesso alla fotocamera del dispositivo esclusivamente per la scansione dei
+    codici a barre dei prodotti. Non vengono acquisite, registrate né archiviate foto o video.
+    I frame della fotocamera vengono elaborati sul dispositivo in tempo reale e immediatamente
+    scartati dopo il rilevamento del codice a barre.
+</p>
 
-Necessario per permettere la scansione dei codici a barre.
-Il permesso è richiesto esclusivamente per questa funzione.
+<h2>5. Richieste di rete</h2>
+<p>
+    L'app effettua richieste di rete esclusivamente verso l'API pubblica di
+    <a href="https://world.openfoodfacts.org" target="_blank">Open Food Facts</a>
+    (<code>openfoodfacts.org</code>) per ottenere informazioni nutrizionali sui prodotti alimentari
+    tramite nome o codice a barre. Queste richieste contengono solo il termine di ricerca o il
+    codice a barre inserito — nessuna informazione personale viene trasmessa. Open Food Facts è un
+    progetto indipendente senza scopo di lucro; a tali richieste si applica la propria informativa
+    sulla privacy.
+</p>
+<p>
+    L'app non contatta altri servizi esterni, server o API di terze parti.
+</p>
 
-📌 4. Condivisione dei dati
+<h2>6. Librerie di terze parti</h2>
+<p>
+    L'app utilizza i seguenti pacchetti open-source Flutter/Dart, nessuno dei quali raccoglie dati
+    degli utenti:
+</p>
+<ul>
+    <li><strong>mobile_scanner</strong> — scansione barcode sul dispositivo</li>
+    <li><strong>http</strong> — richieste HTTP verso Open Food Facts</li>
+    <li><strong>shared_preferences</strong> — archiviazione locale chiave-valore</li>
+    <li><strong>fl_chart</strong> — grafici nutrizionali renderizzati localmente</li>
+    <li><strong>flutter_speed_dial</strong> — componente UI</li>
+    <li><strong>flutter_localizations / intl</strong> — localizzazione (IT/EN)</li>
+</ul>
 
-L’app non condivide alcun dato con terze parti.
+<h2>7. Privacy dei minori</h2>
+<p>
+    L'app non raccoglie consapevolmente informazioni da nessuno, inclusi i minori di 13 anni.
+    Non essendo raccolto alcun dato, non è necessaria alcuna gestione speciale dei dati dei minori.
+</p>
 
-📌 5. Sicurezza
+<h2>8. Modifiche alla presente informativa</h2>
+<p>
+    In caso di aggiornamento della presente informativa, la nuova versione sarà pubblicata a questo
+    URL e inclusa nel successivo rilascio dell'app.
+</p>
 
-Poiché l’app non raccoglie dati, non conserva alcuna informazione personale dell’utente.
+<h2>9. Contatti</h2>
+<p>
+    Per domande relative alla presente informativa, contatta lo sviluppatore all'indirizzo:
+    <a href="mailto:caldaronello.dev@gmail.com">caldaronello.dev@gmail.com</a>
+</p>
 
-📌 6. Minori
-
-L’app può essere utilizzata da persone di qualsiasi età poiché non raccoglie dati personali.
-
-📌 7. Modifiche a questa informativa
-
-Questa informativa può essere aggiornata. Eventuali modifiche saranno pubblicate nella stessa pagina.
-
-📌 8. Contatti
-
-Per qualsiasi domanda sulla privacy, puoi contattare lo sviluppatore:
-
-📧 caldaronello.dev@gmail.com
+</body>
+</html>
