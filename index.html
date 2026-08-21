@@ -21,7 +21,7 @@
 
 <span class="lang-label">ENGLISH</span>
 <h1>Privacy Policy — Nutrition Manager</h1>
-<p class="last-updated">Last updated: May 8, 2026</p>
+<p class="last-updated">Last updated: August 21, 2026</p>
 
 <h2>1. About this app</h2>
 <p>
@@ -32,15 +32,19 @@
 
 <h2>2. Data collection</h2>
 <p>
-    Nutrition Manager does <strong>not</strong> collect, store, or transmit any personal data.
-    Specifically:
+    Nutrition Manager does <strong>not</strong> require an account and does not collect names, email
+    addresses, or any other directly identifying information. No health or biometric data ever leaves
+    your device except as described in section 5 below (AI recipe suggestions). Specifically:
 </p>
 <ul>
     <li>No account or registration is required.</li>
-    <li>No names, email addresses, or identifiers of any kind are collected.</li>
-    <li>No health or biometric data leaves your device.</li>
-    <li>No analytics, crash reporting, or advertising SDKs are included in the app.</li>
-    <li>No tracking or profiling of any kind takes place.</li>
+    <li>No names, email addresses, or contact details are collected.</li>
+    <li>No advertising SDKs are included in the app, and no data is ever used for advertising or sold to third parties.</li>
+    <li>
+        The app uses minimal, aggregate usage analytics (see section 5) to understand which features are
+        used, and a device identifier to enforce the free-trial limit of the optional AI recipe feature
+        (see section 5). Neither is linked to your name, email, or any other directly identifying information.
+    </li>
 </ul>
 
 <h2>3. Local data storage</h2>
@@ -68,7 +72,7 @@
 
 <h2>5. Network requests</h2>
 <p>
-    The app makes network requests exclusively to the
+    The app makes network requests to the
     <a href="https://world.openfoodfacts.org" target="_blank">Open Food Facts</a> public API
     (<code>openfoodfacts.org</code>) in order to retrieve nutritional information for food products
     by name or barcode. These requests contain only the search term or barcode you entered — no
@@ -76,21 +80,60 @@
     its own privacy policy applies to those requests.
 </p>
 <p>
+    The app also contacts a backend service we operate on Cloudflare Workers
+    (<code>*.workers.dev</code>), for two optional features:
+</p>
+<ul>
+    <li>
+        <strong>AI recipe suggestions</strong> (an optional, opt-in feature accessible from the Fridge
+        screen): when you request AI-generated recipe ideas, the names of the fridge items you choose
+        to include, any dietary preferences or ingredient exclusions you select (including exclusions
+        you mark as allergies, if you use that option), are sent to our backend, which forwards them to
+        Anthropic's Claude API to generate the suggestions. This content is used only to generate your
+        response and is not stored by us beyond the request. To enforce the free-trial limit (10 free
+        requests, then optional paid top-up packages) and prevent abuse, the backend also receives a
+        non-resettable device identifier (Android ID) tied to the app's signing key — this identifier is
+        used solely to count remaining requests for your device and is never linked to your name or any
+        other personal information. Anthropic's own privacy policy applies to the processing of this
+        content on their side.
+    </li>
+    <li>
+        <strong>Anonymous usage analytics</strong>: the app sends aggregate, anonymous event counts (e.g.
+        which section you opened, whether onboarding was completed, whether you shared a meal card) to
+        help us understand which features are actually used. These events carry at most one category
+        label and a randomly generated installation identifier (not derived from any device or account
+        identifier, and unrelated to the Android ID described above) used only to avoid double-counting
+        the same install across sessions. No meal, fridge, or shopping list content is ever included in
+        these events.
+    </li>
+</ul>
+<p>
     No other external services, servers, or third-party APIs are contacted by this app.
 </p>
 
 <h2>6. Third-party libraries</h2>
 <p>
-    The app uses the following open-source Flutter/Dart packages, none of which collect user data:
+    The app uses the following open-source Flutter/Dart packages. None of them collect or transmit
+    user data on their own — network requests are made explicitly by the app's own code as described
+    in section 5:
 </p>
 <ul>
     <li><strong>mobile_scanner</strong> — on-device barcode scanning</li>
-    <li><strong>http</strong> — HTTP requests to Open Food Facts</li>
+    <li><strong>http</strong> — HTTP requests to Open Food Facts and to our backend (section 5)</li>
     <li><strong>shared_preferences</strong> — local key-value storage</li>
     <li><strong>fl_chart</strong> — nutritional charts rendered locally</li>
     <li><strong>flutter_speed_dial</strong> — UI component</li>
     <li><strong>flutter_localizations / intl</strong> — localization (IT/EN)</li>
-    <li><strong>video_player</strong> — local video preview in the sharing screen (no data transmitted)</li>
+    <li><strong>image_picker</strong> — selecting or capturing photos for the sharing feature</li>
+    <li><strong>video_player</strong> — local video preview in the sharing screen</li>
+    <li><strong>ffmpeg_kit_flutter_new</strong> — on-device video processing for the sharing feature (no data transmitted)</li>
+    <li><strong>share_plus</strong> — invoking the operating system's native share sheet</li>
+    <li><strong>path_provider</strong> — locating local app storage directories</li>
+    <li><strong>file_picker</strong> — selecting files for data import/export</li>
+    <li><strong>pdf</strong> — generating local PDF exports</li>
+    <li><strong>flutter_local_notifications</strong> — local device notifications (e.g. expiry reminders), scheduled entirely on-device</li>
+    <li><strong>timezone</strong> — local time zone handling for scheduled notifications</li>
+    <li><strong>url_launcher</strong> — opening external links you tap</li>
 </ul>
 
 <h2>7. Children's privacy</h2>
@@ -115,7 +158,7 @@
 
 <span class="lang-label">ITALIANO</span>
 <h1>Informativa sulla Privacy — Nutrition Manager</h1>
-<p class="last-updated">Ultimo aggiornamento: 8 maggio 2026</p>
+<p class="last-updated">Ultimo aggiornamento: 21 agosto 2026</p>
 
 <h2>1. Informazioni sull'app</h2>
 <p>
@@ -126,15 +169,21 @@
 
 <h2>2. Raccolta dei dati</h2>
 <p>
-    Nutrition Manager <strong>non</strong> raccoglie, archivia né trasmette dati personali.
-    In particolare:
+    Nutrition Manager <strong>non</strong> richiede un account e non raccoglie nomi, indirizzi e-mail
+    o altre informazioni che ti identificano direttamente. Nessun dato sanitario o biometrico lascia
+    il tuo dispositivo, salvo quanto descritto nella sezione 5 (suggerimenti ricette con IA). In
+    particolare:
 </p>
 <ul>
     <li>Non è richiesta alcuna registrazione o account.</li>
-    <li>Non vengono raccolti nomi, indirizzi e-mail o identificatori di alcun tipo.</li>
-    <li>Nessun dato sanitario o biometrico lascia il tuo dispositivo.</li>
-    <li>L'app non include SDK di analytics, crash reporting o pubblicità.</li>
-    <li>Non viene effettuato alcun tracking o profilazione.</li>
+    <li>Non vengono raccolti nomi, indirizzi e-mail o altri recapiti.</li>
+    <li>L'app non include SDK pubblicitari, e nessun dato viene mai usato per pubblicità o venduto a terzi.</li>
+    <li>
+        L'app utilizza analytics d'uso minime e aggregate (vedi sezione 5) per capire quali funzioni
+        vengono usate, e un identificativo del dispositivo per far rispettare il limite del trial
+        gratuito della funzione opzionale di ricette IA (vedi sezione 5). Nessuno dei due è collegato
+        al tuo nome, e-mail o altra informazione che ti identifica direttamente.
+    </li>
 </ul>
 
 <h2>3. Archiviazione locale dei dati</h2>
@@ -164,7 +213,7 @@
 
 <h2>5. Richieste di rete</h2>
 <p>
-    L'app effettua richieste di rete esclusivamente verso l'API pubblica di
+    L'app effettua richieste di rete verso l'API pubblica di
     <a href="https://world.openfoodfacts.org" target="_blank">Open Food Facts</a>
     (<code>openfoodfacts.org</code>) per ottenere informazioni nutrizionali sui prodotti alimentari
     tramite nome o codice a barre. Queste richieste contengono solo il termine di ricerca o il
@@ -173,22 +222,61 @@
     sulla privacy.
 </p>
 <p>
+    L'app contatta anche un servizio backend che gestiamo su Cloudflare Workers
+    (<code>*.workers.dev</code>), per due funzioni opzionali:
+</p>
+<ul>
+    <li>
+        <strong>Suggerimenti ricette con IA</strong> (funzione opzionale, attivata solo su tua richiesta
+        dalla schermata Frigo): quando richiedi idee di ricette generate dall'IA, i nomi dei prodotti del
+        frigo che scegli di includere, le eventuali preferenze alimentari o esclusioni di ingredienti che
+        selezioni (incluse le esclusioni che segnali come allergie, se usi quell'opzione) vengono inviati
+        al nostro backend, che li inoltra all'API Claude di Anthropic per generare i suggerimenti. Questo
+        contenuto viene usato solo per generare la tua risposta e non viene archiviato da noi oltre la
+        singola richiesta. Per far rispettare il limite del trial gratuito (10 richieste gratuite, poi
+        pacchetti a pagamento opzionali) e prevenire abusi, il backend riceve anche un identificativo del
+        dispositivo non azzerabile (Android ID) legato alla chiave di firma dell'app — questo
+        identificativo è usato solo per contare le richieste rimanenti per il tuo dispositivo e non è mai
+        collegato al tuo nome o ad altre informazioni personali. All'elaborazione di questo contenuto da
+        parte di Anthropic si applica la loro informativa sulla privacy.
+    </li>
+    <li>
+        <strong>Analytics d'uso anonime</strong>: l'app invia conteggi di eventi aggregati e anonimi (es.
+        quale sezione hai aperto, se l'onboarding è stato completato, se hai condiviso una card di un
+        pasto) per aiutarci a capire quali funzioni vengono effettivamente usate. Questi eventi contengono
+        al massimo un'etichetta di categoria e un identificativo di installazione generato casualmente
+        (non derivato da alcun identificativo del dispositivo o dell'account, e distinto dall'Android ID
+        descritto sopra), usato solo per evitare di contare due volte la stessa installazione in sessioni
+        diverse. Nessun contenuto di pasti, frigo o liste della spesa è mai incluso in questi eventi.
+    </li>
+</ul>
+<p>
     L'app non contatta altri servizi esterni, server o API di terze parti.
 </p>
 
 <h2>6. Librerie di terze parti</h2>
 <p>
-    L'app utilizza i seguenti pacchetti open-source Flutter/Dart, nessuno dei quali raccoglie dati
-    degli utenti:
+    L'app utilizza i seguenti pacchetti open-source Flutter/Dart. Nessuno di essi raccoglie o trasmette
+    dati per conto proprio — le richieste di rete sono effettuate esplicitamente dal codice dell'app
+    come descritto nella sezione 5:
 </p>
 <ul>
     <li><strong>mobile_scanner</strong> — scansione barcode sul dispositivo</li>
-    <li><strong>http</strong> — richieste HTTP verso Open Food Facts</li>
+    <li><strong>http</strong> — richieste HTTP verso Open Food Facts e verso il nostro backend (sezione 5)</li>
     <li><strong>shared_preferences</strong> — archiviazione locale chiave-valore</li>
     <li><strong>fl_chart</strong> — grafici nutrizionali renderizzati localmente</li>
     <li><strong>flutter_speed_dial</strong> — componente UI</li>
     <li><strong>flutter_localizations / intl</strong> — localizzazione (IT/EN)</li>
-    <li><strong>video_player</strong> — anteprima video locale nella schermata di condivisione (nessun dato trasmesso)</li>
+    <li><strong>image_picker</strong> — selezione o scatto di foto per la funzione di condivisione</li>
+    <li><strong>video_player</strong> — anteprima video locale nella schermata di condivisione</li>
+    <li><strong>ffmpeg_kit_flutter_new</strong> — elaborazione video sul dispositivo per la funzione di condivisione (nessun dato trasmesso)</li>
+    <li><strong>share_plus</strong> — apertura del pannello di condivisione nativo del sistema operativo</li>
+    <li><strong>path_provider</strong> — individuazione delle cartelle di archiviazione locale dell'app</li>
+    <li><strong>file_picker</strong> — selezione di file per l'import/export dati</li>
+    <li><strong>pdf</strong> — generazione locale di export PDF</li>
+    <li><strong>flutter_local_notifications</strong> — notifiche locali del dispositivo (es. promemoria scadenze), programmate interamente sul dispositivo</li>
+    <li><strong>timezone</strong> — gestione del fuso orario locale per le notifiche programmate</li>
+    <li><strong>url_launcher</strong> — apertura dei link esterni che tocchi</li>
 </ul>
 
 <h2>7. Privacy dei minori</h2>
